@@ -1,8 +1,7 @@
 // state
 export const state = () => ({
   todos: [
-    ,/* 
-    {
+    /*   {
       id: 1,
       title: "Todo One",
       completed: true,
@@ -16,7 +15,7 @@ export const state = () => ({
       id: 3,
       title: "Todo Three",
       completed: false,
-    } */
+    }, */
   ],
 });
 
@@ -29,12 +28,14 @@ export const actions = {};
 //mutations
 export const mutations = {
   ADD_TODO(state, todo) {
-    state.todos = [{ content: todo, done: false }, ...state.todos];
+    state.todos = [todo, ...state.todos];
   },
-  REMOVE_TODO(state, todo) {
-    state.todos.splice(state.todos.indexOf(task), 1);
+  REMOVE_TODO(state, id) {
+    const deletedState = state.todos.filter((todo) => todo.id !== id);
+    state.todos = deletedState;
   },
-  TOGGLE_TODO(state, todo) {
-    todo.done = !todo.done;
+  COMPLETE_TODO(state, todoitem) {
+    //  const completedItem = state.todos.filter((todo) => todo.id === todoitem.id);
+    todoitem.completed = !todoitem.completed;
   },
 };

@@ -1,4 +1,5 @@
-export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
+export { default as Calculator } from '../../components/Calculator.vue'
+export { default as Counter } from '../../components/Counter.vue'
 export { default as ToDos } from '../../components/ToDos.vue'
 export { default as TodoItem } from '../../components/TodoItem.vue'
 

@@ -4,29 +4,56 @@
       <header>Header</header>
       <div class="container">
         <div class="main">
-          <div class="widget-container">
-            <ToDos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+          <div>
+            <div class="field-container">
+              <input
+                type="text"
+                v-model="newTodo"
+                placeholder="Add a new todo"
+                @keypress.enter="addTodo"
+              />
+            </div>
+            <div class="widget-container">
+              {{ $store.state.todos }}
+              <ToDos
+                v-bind:todos="$store.state.todos"
+                v-on:complete-todo="completeTodo"
+                v-on:del-todo="deleteTodo"
+              />
+            </div>
           </div>
-          <div class="widget-container">Widget two</div>
+          <div class="widget-container">
+            <Calculator />
+          </div>
         </div>
       </div>
+      <div><Counter /></div>
       <footer>Footer</footer>
     </div>
   </div>
 </template>
 
-<script>
+<script type="module">
+import Calculator from "../components/Calculator";
 import ToDos from "../components/ToDos";
+import Counter from "../components/Counter";
+
 /* import { mapState, mapGetters, mapActions, mapMutations } from "vuex"; */
 export default {
   name: "App",
   components: {
     ToDos,
+    Calculator,
+    Counter,
   },
   /*   computed: mapState(todos), */
   data() {
     return {
       title: "The Block - NFT Charts: Transactions, Users and Trading Volumes",
+      newTodo: "",
+
+      todos: [],
+      i: 0,
     };
   },
   head() {
@@ -47,11 +74,22 @@ export default {
     };
   },
   methods: {
-    deleteTodo(id) {
-      this.todos = this.todos.filter((todo) => todo.id !== id);
+    deleteTodo(todo) {
+      this.$store.commit("REMOVE_TODO", todo.id);
+    },
+    completeTodo(id) {
+      this.$store.commit("COMPLETE_TODO", id);
     },
     addTodo() {
-      this.$store.commit("ADD_TODO", this.newTodo);
+      if (this.newTodo) {
+        this.$store.commit("ADD_TODO", {
+          id: this.i,
+          completed: false,
+          title: this.newTodo,
+        });
+        this.newTodo = "";
+        this.i++;
+      }
     },
   },
 };
