@@ -2,9 +2,6 @@
   "Calculator": {
     "description": "Auto imported from components/Calculator.vue"
   },
-  "Counter": {
-    "description": "Auto imported from components/Counter.vue"
-  },
   "ToDos": {
     "description": "Auto imported from components/ToDos.vue"
   },

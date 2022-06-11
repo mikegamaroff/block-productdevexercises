@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <header>Header</header>
+      <header>   <Header /></header>
       <div class="container">
         <div class="main">
           <div>
@@ -36,7 +36,8 @@
 <script type="module">
 import Calculator from "../components/Calculator";
 import ToDos from "../components/ToDos";
-import Counter from "../components/Counter";
+import Counter from "../src/stories/Counter";
+import Header from "../src/stories/Header";
 
 /* import { mapState, mapGetters, mapActions, mapMutations } from "vuex"; */
 export default {
@@ -45,6 +46,7 @@ export default {
     ToDos,
     Calculator,
     Counter,
+    Header
   },
   /*   computed: mapState(todos), */
   data() {
@@ -118,8 +120,7 @@ export default {
   align-items: center;
   width: 100%;
 }
-.widget-container {
-}
+
 
 .blackpanel {
   position: relative;
