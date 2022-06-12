@@ -4,28 +4,19 @@
       <HeaderBar />
     </header>
     <div>
-
       <div class="container">
         <div class="leftNav">Left Nav</div>
         <div class="main">
-          <div>
-            <div class="field-container">
-              <input type="text" data-test="new-todo" v-model="newTodo" placeholder="Add a new todo"
-                @keypress.enter="addTodo" />
-            </div>
-            <div class="widget-container">
-              {{ $store.state.todos }}
-              <ToDos v-bind:todos="$store.state.todos" v-on:complete-todo="completeTodo" v-on:del-todo="deleteTodo" />
-            </div>
-          </div>
-          <div class="widget-container">
-            <Calculator />
-          </div>
+
+
+          <ToDos />
+
+
+
+          <Calculator />
 
         </div>
       </div>
-
-
     </div>
     <footer>Footer</footer>
   </div>
@@ -35,23 +26,19 @@
 import Calculator from "../components/Calculator";
 import ToDos from "../components/ToDos";
 import HeaderBar from "../src/stories/HeaderBar";
-import '../css/animation.css';
 /* import { mapState, mapGetters, mapActions, mapMutations } from "vuex"; */
 export default {
   name: "App",
   components: {
     ToDos,
     Calculator,
-    HeaderBar
+    HeaderBar,
   },
   /*   computed: mapState(todos), */
   data() {
     return {
       title: "The Block - NFT Charts: Transactions, Users and Trading Volumes",
-      newTodo: "",
 
-      todos: [],
-      i: 0,
     };
   },
   head() {
@@ -72,34 +59,50 @@ export default {
     };
   },
   methods: {
-    deleteTodo(todo) {
-      this.$store.commit("REMOVE_TODO", todo.id);
-    },
-    completeTodo(id) {
-      this.$store.commit("COMPLETE_TODO", id);
-    },
-    addTodo() {
-      if (this.newTodo) {
-        this.$store.commit("ADD_TODO", {
-          id: this.i,
-          completed: false,
-          title: this.newTodo,
-        });
-        this.newTodo = "";
-        this.i++;
-      }
-    },
-  }
+
+  },
 };
 </script>
 
 <style>
+@font-face {
+  font-family: "Lota Regular";
+
+  src: url("/fonts/Lato_Regular/LotaGrotesqueAlt3-Regular.woff") format("woff");
+  src: url("/fonts/Lato_Regular/LotaGrotesqueAlt3-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lota Semibold";
+
+  src: url("/fonts/Lato_Semibold/LotaGrotesqueAlt3-SemiBold.woff") format("woff");
+  src: url("/fonts/Lato_Semibold/LotaGrotesqueAlt3-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lota Bold";
+
+  src: url("/fonts/Lato_Bold/LotaGrotesqueAlt3-Bold.woff") format("woff");
+  src: url("/fonts/Lato_Bold/LotaGrotesqueAlt3-Bold.woff2") format("woff2");
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+
+  color: #2c3e50;
+}
+
+body,
+html {
+  font-family: "Lota Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  padding: 5px;
+  margin: none;
+
+}
+
+* {
+  margin: 0;
 }
 
 * {
@@ -109,43 +112,26 @@ export default {
 }
 
 .container {
-  padding: 50px 1rem 1rem 1rem;
   display: flex;
-  justify-content: center;
   position: relative;
   align-items: center;
+
 }
 
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  height: calc(100vh - 120px);
   background-color: #f3f3f3;
+  border-radius: 12px;
+  padding: 30px;
+  gap: 40px;
 }
 
 
-.blackpanel {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.618);
-  border-radius: 50px;
-  padding: 70px 30px 30px 30px;
-  width: auto;
-  min-width: 600px;
-}
 
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.header img {
-  width: 100px;
-}
 
 .leftNav {
   min-width: 200px;

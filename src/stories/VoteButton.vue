@@ -7,8 +7,9 @@
       <button @click="action" @mouseup="rotation" @mousedown="rotation"
         :class="{ mouseover: clicked, mouseup: !clicked }">
         <span class="icon">
-          <img src="../../assets/thumb_down.svg" />
-
+          <!--     <img src="' ../../assets/thumb_ ' + thumb + '.svg'" /> -->
+          <img v-if="thumb === 'up'" src="../../assets/thumb_up.svg" />
+          <img v-else src="../../assets/thumb_down.svg" />
         </span>
       </button>
     </transition>

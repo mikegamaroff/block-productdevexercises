@@ -1,19 +1,19 @@
 <template>
-  <header>
-    <div class="wrapper">
-      <div>
-        <img class="logo" src="../../assets/logo.svg" alt="logo" />
 
-      </div>
-
-      <Counter />
+  <div class="header-container">
+    <div>
+      <img class="logo" src="../../assets/logo.svg" alt="logo" />
 
     </div>
-  </header>
+
+    <Counter />
+
+  </div>
+
 </template>
 
 <script>
-import './header.css';
+
 import MyButton from './Button.vue';
 import Counter from "./Counter";
 export default {
@@ -32,9 +32,17 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .logo {
   height: 40px;
+  padding-left: 10px;
+}
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  padding-bottom: 10px;
 }
 </style>
