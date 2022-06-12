@@ -4,12 +4,8 @@
       <div class="outputCalc">{{ calculatorValue || 0 }}</div>
     </div>
     <div class="buttons">
-      <div
-        class="button"
-        v-for="n in btnArr"
-        :key="n"
-        :class="{ operator: ['C', '*', '/', '-', '+', '%', '='].includes(n) }"
-      >
+      <div class="button" v-for="n in btnArr" :key="n"
+        :class="{ operator: ['C', '*', '/', '-', '+', '%', '='].includes(n) }">
         <div class="btn" @click="action(n)">
           {{ n }}
         </div>
@@ -87,6 +83,7 @@ h1 {
   margin-top: 100px;
   text-align: center;
 }
+
 .output {
   text-align: right;
   background-color: antiquewhite;
@@ -102,11 +99,13 @@ h1 {
     41.8px 41.8px 33.4px rgba(0, 0, 0, 0.022),
     100px 100px 80px rgba(0, 0, 0, 0.03);
 }
+
 .outputCalc {
   background-color: rgb(255, 209, 148);
   padding: 15px;
   border-radius: 3px;
 }
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -126,6 +125,7 @@ h1 {
     41.8px 41.8px 33.4px rgba(0, 0, 0, 0.022),
     100px 100px 80px rgba(0, 0, 0, 0.03);
 }
+
 .button {
   background-color: rgb(255, 209, 148);
   padding: 6px;
@@ -138,36 +138,23 @@ h1 {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+
 .button:hover {
   background-color: rgb(238, 167, 75);
   color: #000;
 }
+
 .operator {
   background-color: rgb(238, 167, 75);
   color: #000;
 }
+
 .operator:hover {
   background-color: rgb(255, 209, 148);
 }
+
 .MyId:hover {
   cursor: pointer;
   filter: brightness(130%);
-}
-footer {
-  text-align: center;
-  width: min(300px, 90%);
-  border-radius: 3px;
-  margin: 100px auto;
-  background-color: #0000002a;
-  padding: 10px;
-  font-weight: bold;
-  color: #444;
-  text-transform: capitalize;
-  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.008),
-    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.012),
-    12.5px 12.5px 10px rgba(0, 0, 0, 0.015),
-    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.018),
-    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.022),
-    100px 100px 80px rgba(0, 0, 0, 0.03);
 }
 </style>

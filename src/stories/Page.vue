@@ -1,10 +1,8 @@
 <template>
   <article>
-    <my-header
-      :user="user"
-      @onLogin="onLogin"
-      @onLogout="onLogout"
-      @onCreateAccount="onCreateAccount"
+    <MyHeader
+      :logo="logo"
+
     />
 
     <section>
@@ -60,7 +58,7 @@
 
 <script>
 import './page.css';
-import MyHeader from './Header.vue';
+import MyHeader from './HeaderBar.vue';
 
 export default {
   name: 'my-page',
@@ -74,15 +72,7 @@ export default {
   },
 
   methods: {
-    onLogin() {
-      this.user = { name: 'Jane Doe' };
-    },
-    onLogout() {
-      this.user = null;
-    },
-    onCreateAccount() {
-      this.user = { name: 'Jane Doe' };
-    },
+
   },
 };
 </script>

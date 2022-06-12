@@ -1,52 +1,48 @@
 <template>
   <div id="app">
+    <header>
+      <HeaderBar />
+    </header>
     <div>
-      <header>   <Header /></header>
+
       <div class="container">
+        <div class="leftNav">Left Nav</div>
         <div class="main">
           <div>
             <div class="field-container">
-              <input
-                type="text"
-                v-model="newTodo"
-                placeholder="Add a new todo"
-                @keypress.enter="addTodo"
-              />
+              <input type="text" data-test="new-todo" v-model="newTodo" placeholder="Add a new todo"
+                @keypress.enter="addTodo" />
             </div>
             <div class="widget-container">
               {{ $store.state.todos }}
-              <ToDos
-                v-bind:todos="$store.state.todos"
-                v-on:complete-todo="completeTodo"
-                v-on:del-todo="deleteTodo"
-              />
+              <ToDos v-bind:todos="$store.state.todos" v-on:complete-todo="completeTodo" v-on:del-todo="deleteTodo" />
             </div>
           </div>
           <div class="widget-container">
             <Calculator />
           </div>
+
         </div>
       </div>
-      <div><Counter /></div>
-      <footer>Footer</footer>
+
+
     </div>
+    <footer>Footer</footer>
   </div>
 </template>
 
 <script type="module">
 import Calculator from "../components/Calculator";
 import ToDos from "../components/ToDos";
-import Counter from "../src/stories/Counter";
-import Header from "../src/stories/Header";
-
+import HeaderBar from "../src/stories/HeaderBar";
+import '../css/animation.css';
 /* import { mapState, mapGetters, mapActions, mapMutations } from "vuex"; */
 export default {
   name: "App",
   components: {
     ToDos,
     Calculator,
-    Counter,
-    Header
+    HeaderBar
   },
   /*   computed: mapState(todos), */
   data() {
@@ -93,7 +89,7 @@ export default {
         this.i++;
       }
     },
-  },
+  }
 };
 </script>
 
@@ -105,6 +101,13 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 .container {
   padding: 50px 1rem 1rem 1rem;
   display: flex;
@@ -112,6 +115,7 @@ export default {
   position: relative;
   align-items: center;
 }
+
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -119,6 +123,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: #f3f3f3;
 }
 
 
@@ -137,7 +142,13 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .header img {
   width: 100px;
+}
+
+.leftNav {
+  min-width: 200px;
+  width: 20vw;
 }
 </style>
