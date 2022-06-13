@@ -2,7 +2,7 @@
 
   <div class="header-container">
     <div>
-      <img class="logo" src="../../assets/logo.svg" alt="logo" />
+      <img class="logo" src="../assets/logo.svg" alt="logo" />
 
     </div>
 
@@ -14,12 +14,11 @@
 
 <script>
 
-import MyButton from './Button.vue';
-import Counter from "./Counter";
+import Counter from "../src/stories/Counter.vue";
 export default {
   name: 'HeaderBar',
 
-  components: { MyButton, Counter },
+  components: { Counter },
 
   props: {
     user: {

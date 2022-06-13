@@ -9,7 +9,7 @@
     "dev": "nuxt",
     "generate": "nuxt generate",
     "start": "nuxt start",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./static",
     "test": "jest"
   },
   "dependencies": {

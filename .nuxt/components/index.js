@@ -1,4 +1,6 @@
 export { default as Calculator } from '../../components/Calculator.vue'
+export { default as HeaderBar } from '../../components/HeaderBar.vue'
+export { default as Signature } from '../../components/Signature.vue'
 export { default as ToDos } from '../../components/ToDos.vue'
 export { default as TodoItem } from '../../components/TodoItem.vue'
 

@@ -95,7 +95,7 @@ export default {
 [type=checkbox] {
   width: 2rem;
   height: 2rem;
-  color: dodgerblue;
+  color: rgb(25, 142, 136);
   vertical-align: middle;
   -webkit-appearance: none;
   background: none;

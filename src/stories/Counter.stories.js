@@ -6,11 +6,7 @@ export default {
   component: Counter,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    backgroundColor: { control: "color" },
-    size: {
-      control: { type: "select" },
-      options: ["small", "medium", "large"],
-    },
+    label: { control: "color" },
   },
 };
 
@@ -24,6 +20,5 @@ const Template = (args, { argTypes }) => ({
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
-  primary: true,
-  label: "Button",
+  label: "How good is this test out of 10?",
 };

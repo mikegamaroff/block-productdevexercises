@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
-    <div class="message">How good is this test out of 10?</div>
-    <div class="rate-container">
-      <div class="score">
+  <div class="counter-container">
+    <div class="counter-message">{{ label }}</div>
+    <div class="counter-rate-container">
+      <div class="counter-score">
         <div>{{ counter }}</div>
       </div>
       <VoteButton :action="incrementCounter" thumb="up" />
@@ -50,6 +50,7 @@
 </template>
 
 <script>
+
 import VoteButton from "./VoteButton";
 export default {
   data() {
@@ -60,6 +61,11 @@ export default {
     };
   },
   components: { VoteButton },
+  props: {
+    label: {
+      type: String
+    }
+  },
   methods: {
     incrementCounter() {
       this.counter++;
@@ -75,29 +81,4 @@ export default {
 };
 </script>
 <style scoped>
-.container {
-  padding: 0;
-  gap: 25px;
-}
-
-.rate-container {
-  display: flex;
-  background: #f3f3f3;
-
-  padding: 10px 20px 10px 20px;
-  border-radius: 13px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.message {
-  height: 100%;
-}
-
-.score {
-  width: 30px;
-  font-weight: 800;
-  font-size: 26px;
-}
 </style>

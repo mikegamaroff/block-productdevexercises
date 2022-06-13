@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <header>
-      <HeaderBar />
+      <HeaderBar path="../../assets/logo.svg" />
     </header>
     <div>
       <div class="container">
-        <div class="leftNav">Left Nav</div>
+        <div class="leftNav">
+          <Signature />
+        </div>
         <div class="main">
 
 
@@ -18,14 +20,16 @@
         </div>
       </div>
     </div>
-    <footer>Footer</footer>
+    <footer> <img class="logo" src="../assets/logo_white.svg" alt="logo" /></footer>
   </div>
 </template>
 
 <script type="module">
 import Calculator from "../components/Calculator";
 import ToDos from "../components/ToDos";
-import HeaderBar from "../src/stories/HeaderBar";
+import Signature from "../components/Signature";
+import HeaderBar from "../components/HeaderBar";
+import "../css/global.css";
 /* import { mapState, mapGetters, mapActions, mapMutations } from "vuex"; */
 export default {
   name: "App",
@@ -33,6 +37,7 @@ export default {
     ToDos,
     Calculator,
     HeaderBar,
+    Signature
   },
   /*   computed: mapState(todos), */
   data() {
@@ -65,76 +70,4 @@ export default {
 </script>
 
 <style>
-@font-face {
-  font-family: "Lota Regular";
-
-  src: url("/fonts/Lato_Regular/LotaGrotesqueAlt3-Regular.woff") format("woff");
-  src: url("/fonts/Lato_Regular/LotaGrotesqueAlt3-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Lota Semibold";
-
-  src: url("/fonts/Lato_Semibold/LotaGrotesqueAlt3-SemiBold.woff") format("woff");
-  src: url("/fonts/Lato_Semibold/LotaGrotesqueAlt3-SemiBold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Lota Bold";
-
-  src: url("/fonts/Lato_Bold/LotaGrotesqueAlt3-Bold.woff") format("woff");
-  src: url("/fonts/Lato_Bold/LotaGrotesqueAlt3-Bold.woff2") format("woff2");
-}
-
-#app {
-
-  color: #2c3e50;
-}
-
-body,
-html {
-  font-family: "Lota Regular";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding: 5px;
-  margin: none;
-
-}
-
-* {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-.container {
-  display: flex;
-  position: relative;
-  align-items: center;
-
-}
-
-.main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  flex-direction: column;
-  width: 100%;
-  height: calc(100vh - 120px);
-  background-color: #f3f3f3;
-  border-radius: 12px;
-  padding: 30px;
-  gap: 40px;
-}
-
-
-
-
-.leftNav {
-  min-width: 200px;
-  width: 20vw;
-}
 </style>

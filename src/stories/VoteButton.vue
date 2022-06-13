@@ -34,9 +34,7 @@ export default {
     },
   },
   methods: {
-    imgPath() {
-      return this.thumb === "up" ? <img src="../../assets/thumb_up.svg" /> : <img src="../../assets/thumb_down.svg" />
-    },
+
   },
   data: function () {
     return {

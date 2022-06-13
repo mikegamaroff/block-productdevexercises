@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Lota Regular";
+
+  src: url("/fonts/Lato_Regular/LotaGrotesqueAlt3-Regular.woff") format("woff");
+  src: url("/fonts/Lato_Regular/LotaGrotesqueAlt3-Regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Lota Semibold";
+
+  src: url("/fonts/Lato_Semibold/LotaGrotesqueAlt3-SemiBold.woff")
+    format("woff");
+  src: url("/fonts/Lato_Semibold/LotaGrotesqueAlt3-SemiBold.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Lota Bold";
+
+  src: url("/fonts/Lato_Bold/LotaGrotesqueAlt3-Bold.woff") format("woff");
+  src: url("/fonts/Lato_Bold/LotaGrotesqueAlt3-Bold.woff2") format("woff2");
+}
+
+#app {
+  color: #2c3e50;
+}
+
+body,
+html {
+  font-family: "Lota Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 5px;
+  margin: none;
+}
+
+* {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-color: #f3f3f3;
+  border-radius: 12px;
+  padding: 30px;
+  gap: 40px;
+}
+
+.leftNav {
+  min-width: 200px;
+  width: 20vw;
+  display: flex;
+
+  padding-top: 25px;
+  height: 100%;
+}
+
+footer {
+  background: #2c2d2d;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+footer img {
+  height: 25px;
+}
+
+/* COUNTER */
+
+.counter-container {
+  padding: 0;
+  gap: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-rate-container {
+  display: flex;
+  background: #f3f3f3;
+
+  padding: 10px 20px 10px 20px;
+  border-radius: 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-message {
+  height: 100%;
+}
+
+.counter-score {
+  width: 30px;
+  font-weight: 800;
+  font-size: 26px;
+}

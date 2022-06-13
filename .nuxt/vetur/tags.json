@@ -2,6 +2,12 @@
   "Calculator": {
     "description": "Auto imported from components/Calculator.vue"
   },
+  "HeaderBar": {
+    "description": "Auto imported from components/HeaderBar.vue"
+  },
+  "Signature": {
+    "description": "Auto imported from components/Signature.vue"
+  },
   "ToDos": {
     "description": "Auto imported from components/ToDos.vue"
   },
