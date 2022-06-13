@@ -37,7 +37,9 @@
             </g>
           </svg>
         </div>
-        <div class="text-link">LinkedIN</div>
+        <a href="https://www.linkedin.com/in/mgamaroff/" target="_blank">
+          <div class="text-link">LinkedIN</div>
+        </a>
       </div>
       <div class="link">
         <div class="icon">
@@ -63,7 +65,9 @@
             </g>
           </svg>
         </div>
-        <div class="text-link">Github</div>
+        <a href="https://github.com/mikegamaroff" target="_blank">
+          <div class="text-link">Github</div>
+        </a>
       </div>
       <div class="link">
         <div class="icon">
@@ -94,7 +98,9 @@
             </g>
           </svg>
         </div>
-        <div class="text-link">mike@gamaroff.net</div>
+        <a href="mailto:mike@gamaroff.net">
+          <div class="text-link">mike@gamaroff.net</div>
+        </a>
       </div>
     </div>
   </div>
