@@ -6,7 +6,7 @@
 
     </div>
 
-    <Counter />
+    <Counter label="How good is this test out of 10?" />
 
   </div>
 

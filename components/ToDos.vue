@@ -70,15 +70,14 @@ export default {
 
 .column-container {
   height: 100%;
-  position: relative;
+
 }
 
 .todo-container {
-  top: 170px;
-  left: 0;
-  position: absolute;
+
+
   overflow-y: scroll;
-  height: calc(100% - 170px);
+
   width: 100%;
 }
 

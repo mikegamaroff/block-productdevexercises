@@ -55,7 +55,7 @@ html {
   grid-template-columns: 1fr 1fr;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 120px);
+
   background-color: #f3f3f3;
   border-radius: 12px;
   padding: 30px;
@@ -112,4 +112,9 @@ footer img {
   width: 30px;
   font-weight: 800;
   font-size: 26px;
+}
+@media (max-width: 800px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
 }

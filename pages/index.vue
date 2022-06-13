@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <HeaderBar path="../../assets/logo.svg" />
+      <HeaderBar />
     </header>
     <div>
       <div class="container">
@@ -9,18 +9,15 @@
           <Signature />
         </div>
         <div class="main">
-
-
           <ToDos />
 
-
-
           <Calculator />
-
         </div>
       </div>
     </div>
-    <footer> <img class="logo" src="../assets/logo_white.svg" alt="logo" /></footer>
+    <footer>
+      <img class="logo" src="../assets/logo_white.svg" alt="logo" />
+    </footer>
   </div>
 </template>
 
@@ -37,13 +34,12 @@ export default {
     ToDos,
     Calculator,
     HeaderBar,
-    Signature
+    Signature,
   },
   /*   computed: mapState(todos), */
   data() {
     return {
       title: "The Block - NFT Charts: Transactions, Users and Trading Volumes",
-
     };
   },
   head() {
@@ -63,9 +59,7 @@ export default {
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     };
   },
-  methods: {
-
-  },
+  methods: {},
 };
 </script>
 
