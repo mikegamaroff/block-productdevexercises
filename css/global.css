@@ -96,7 +96,6 @@ footer img {
 .counter-rate-container {
   display: flex;
   background: #f3f3f3;
-
   padding: 10px 20px 10px 20px;
   border-radius: 13px;
   justify-content: center;
@@ -116,5 +115,24 @@ footer img {
 @media (max-width: 800px) {
   .main {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .counter-container {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+  }
+  .leftNav {
+    min-width: 100%;
   }
 }

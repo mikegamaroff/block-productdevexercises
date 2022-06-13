@@ -44,4 +44,11 @@ export default {
   align-items: center;
   padding-bottom: 10px;
 }
+
+@media (max-width: 800px) {
+
+  .header-container {
+    flex-direction: column;
+  }
+}
 </style>

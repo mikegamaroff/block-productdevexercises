@@ -1,16 +1,8 @@
 <template>
-  <div>
-    <div>
-
-      Created by:
-    </div>
-    <div class="nameplate">
-
-      Mike Gamaroff
-    </div>
-    <div class="phonenumber">
-      917.678.2017
-    </div>
+  <div class="signature-container">
+    <div>Created by:</div>
+    <div class="nameplate">Mike Gamaroff</div>
+    <div class="phonenumber">917.678.2017</div>
 
     <div class="linkList">
       <div class="link">
@@ -112,11 +104,8 @@ export default {
   props: [],
   components: {},
   data() {
-    return {
-
-    };
+    return {};
   },
-
 };
 </script>
 
@@ -128,7 +117,6 @@ svg {
 .nameplate {
   font-family: "Lota Bold";
   font-size: 18px;
-
 }
 
 .phonenumber {
@@ -149,7 +137,6 @@ svg {
 
 .icon {
   height: 30px;
-
 }
 
 .text-link {
@@ -161,5 +148,16 @@ svg {
 
 .text-link:hover {
   color: rgb(46, 69, 68);
+}
+
+@media (max-width: 500px) {
+  .signature-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 </style>
