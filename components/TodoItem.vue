@@ -1,9 +1,10 @@
 <template>
-
   <div class="todo-item" v-bind:class="{ 'todo-item-complete': todo_item.completed }">
     <input class="checkbox" type="checkbox" v-bind:checked="todo_item.completed"
       v-on:change="$emit('complete-todo', todo_item)" />
-    <div class="todoLabel" v-bind:class="{ 'is-complete': todo_item.completed }">{{ todo_item.title }}</div>
+    <div class="todoLabel" v-bind:class="{ 'is-complete': todo_item.completed }">
+      {{ todo_item.title }}
+    </div>
     <button @click="$emit('del-todo', todo_item)" class="del">
       <svg width="195px" height="222px" viewBox="0 0 195 222" version="1.1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -14,9 +15,9 @@
               id="Shape"></path>
           </g>
         </g>
-      </svg></button>
+      </svg>
+    </button>
   </div>
-
 </template>
 
 <script>
@@ -29,7 +30,6 @@ export default {
       todo_item: this.todo,
     };
   },
-
 };
 </script>
 
@@ -41,7 +41,6 @@ export default {
   justify-content: space-between;
   padding: 10px 15px 10px 15px;
   align-content: center;
-
 }
 
 .todo-item-complete {
@@ -51,8 +50,6 @@ export default {
 .is-complete {
   text-decoration: line-through;
   color: rgb(174, 174, 174);
-
-
 }
 
 .todoLabel {
@@ -70,13 +67,12 @@ export default {
   outline: 0;
   flex-grow: 0;
   border-radius: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   cursor: pointer;
   box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .del:hover {
@@ -90,9 +86,7 @@ export default {
   fill: rgb(213, 213, 213);
 }
 
-
-
-[type=checkbox] {
+[type="checkbox"] {
   width: 2rem;
   height: 2rem;
   color: rgb(25, 142, 136);
@@ -103,15 +97,14 @@ export default {
   outline: 0;
   flex-grow: 0;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   transition: background 300ms;
   cursor: pointer;
 }
 
-
 /* Pseudo element for check styling */
 
-[type=checkbox]::before {
+[type="checkbox"]::before {
   content: "";
   color: transparent;
   display: block;
@@ -121,26 +114,24 @@ export default {
   border: 0;
   background-color: transparent;
   background-size: contain;
-  box-shadow: inset 0 0 0 1px #CCD3D8;
+  box-shadow: inset 0 0 0 1px #ccd3d8;
 }
-
 
 /* Checked */
 
-[type=checkbox]:checked {
+[type="checkbox"]:checked {
   background-color: currentcolor;
 }
 
-[type=checkbox]:checked::before {
+[type="checkbox"]:checked::before {
   box-shadow: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
 }
 
-
 /* Disabled */
 
-[type=checkbox]:disabled {
-  background-color: #CCD3D8;
+[type="checkbox"]:disabled {
+  background-color: #ccd3d8;
   opacity: 0.84;
   cursor: not-allowed;
 }

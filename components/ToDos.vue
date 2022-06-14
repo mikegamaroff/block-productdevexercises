@@ -1,6 +1,8 @@
 <template>
   <div class="column-container">
-    <div class="caption">Assign Development tasks to Mike when he starts working for us.</div>
+    <div class="caption">
+      Assign Development tasks to Mike when he starts working for us.
+    </div>
     <div class="mainHeader">Assign Mike's tasks:</div>
     <div class="field-container">
       <input type="text" data-test="new-todo" v-model="newTodo" placeholder="Add a new task"
@@ -21,8 +23,6 @@ import TodoItem from "./TodoItem.vue";
 
 export default {
   name: "ToDos",
-
-
 
   components: {
     TodoItem,
@@ -52,7 +52,7 @@ export default {
         this.i++;
       }
     },
-  }
+  },
 };
 </script>
 
@@ -70,19 +70,15 @@ export default {
 
 .column-container {
   height: 100%;
-
 }
 
 .todo-container {
-
-
   overflow-y: scroll;
 
   width: 100%;
 }
 
 input {
-
   font-size: max(20px, 1em);
   font-family: inherit;
   padding: 0.5em 1em;
@@ -92,7 +88,6 @@ input {
   width: 100%;
   height: 50px;
   margin: 20px 0 30px 0;
-
 }
 
 .todoSet {
@@ -100,7 +95,6 @@ input {
   grid-template-columns: 1fr;
   flex-direction: column;
   gap: 12px;
-
 }
 
 input:focus {

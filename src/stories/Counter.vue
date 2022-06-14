@@ -12,21 +12,19 @@
 </template>
 
 <script>
-
 import VoteButton from "./VoteButton";
 export default {
   data() {
     return {
       title: "How good was this test out of 10?",
       counter: 0,
-
     };
   },
   components: { VoteButton },
   props: {
     label: {
-      type: String
-    }
+      type: String,
+    },
   },
   methods: {
     incrementCounter() {

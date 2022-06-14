@@ -16,7 +16,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -107,7 +106,6 @@ h1 {
   background: white;
   border-radius: 12px;
   padding: 20px;
-
 }
 
 .calculator-container {
@@ -132,7 +130,8 @@ h1 {
 
 .outputCalc {
   background-color: rgb(223, 223, 223);
-  background: linear-gradient(rgb(221, 238, 232) 35%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(rgb(221, 238, 232) 35%,
+      rgba(255, 255, 255, 1) 100%);
   padding: 10px;
   border-radius: 3px;
   font-size: 25px;
