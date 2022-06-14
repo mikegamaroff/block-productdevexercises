@@ -3,7 +3,7 @@
     <div class="counter-message">{{ label }}</div>
     <div class="counter-rate-container">
       <div class="counter-score">
-        <div>{{ counter }}</div>
+        <div>{{ counter }} / 10</div>
       </div>
       <VoteButton :action="incrementCounter" thumb="up" />
       <VoteButton :action="decrementCounter" thumb="down" />
