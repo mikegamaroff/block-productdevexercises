@@ -109,9 +109,9 @@ footer img {
 }
 
 .counter-score {
-  width: 30px;
+  width: 70px;
   font-weight: 800;
-  font-size: 26px;
+  font-size: 23px;
 }
 @media (max-width: 800px) {
   .main {
